@@ -1,0 +1,23 @@
+---
+all:
+  hosts:
+    mercury:
+      ansible_host: mercury.knifey.com
+    venus:
+      ansible_host: venus.knifey.com
+    earth:
+      ansible_host: earth.knifey.com
+    mars:
+      ansible_host: mars.knifey.com
+	children:
+		sol-system:
+    	hosts:
+				mercury: {}
+        venus: {}
+        earth: {}
+        mars: {}
+		monitor:
+			hosts:
+				mercury: {}
+	vars:
+		remote_user: knifey
