@@ -9,15 +9,16 @@ all:
       ansible_host: earth.knifey.com
     mars:
       ansible_host: mars.knifey.com
-	children:
-		sol-system:
-    	hosts:
-				mercury: {}
+  children:
+    sol_system:
+      hosts:
+        mercury: {}
         venus: {}
         earth: {}
         mars: {}
-		monitor:
-			hosts:
-				mercury: {}
-	vars:
-		remote_user: knifey
+    monitor:
+      hosts:
+        mercury: {}
+  vars:
+    ansible_python_interpeter: /usr/bin/python3
+    remote_user: knifey
