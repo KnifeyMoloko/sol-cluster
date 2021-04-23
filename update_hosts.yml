@@ -1,0 +1,13 @@
+---
+- name: Update and upgrade all hosts
+  hosts: sol_system
+  user: knifey
+  tasks:
+    - name: Update and upgrade via yum with skipping broken and updating cache
+      become: true
+      yum:
+        update_cache: yes
+        skip_broken: yes
+        name: '*'
+        state: latest
+        
