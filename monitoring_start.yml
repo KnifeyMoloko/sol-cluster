@@ -1,0 +1,7 @@
+---
+- hosts: sol_system
+  user: knifey
+  roles:
+    - common
+    - node_exporter
+

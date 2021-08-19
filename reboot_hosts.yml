@@ -1,0 +1,9 @@
+---
+- name: Reboot all hosts
+  hosts: sol_system
+  user: knifey
+  tasks:
+    - name: Reboot
+      reboot:
+        reboot_timeout: 1800
+        

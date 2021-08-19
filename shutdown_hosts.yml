@@ -1,0 +1,8 @@
+---
+- name: Shutdown all hosys
+  hosts: sol_system
+  user: knifey
+  tasks:
+    - name: Shutdown
+      community.general.shutdown:
+        

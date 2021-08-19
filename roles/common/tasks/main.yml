@@ -1,0 +1,31 @@
+---
+- name: "Update and upgrade yum packages"
+  become: true
+  yum:
+      update_cache: yes
+      skip_broken: yes
+      name: '*'
+      state: latest
+
+- name: "Stop Cockpit web console"
+  become: true
+  become_user: root
+  become_method: sudo
+  service:
+    name: "{{ item }}"
+    state: stopped
+  with_items:
+    - cockpit
+    - cockpit.socket
+
+
+- name: "Disable Cockpit web console"
+  become: true
+  become_user: root
+  become_method: sudo
+  service:
+    name: "{{ item }}"
+    enabled: no
+  with_items:
+    - cockpit
+    - cockpit.socket

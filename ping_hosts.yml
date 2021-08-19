@@ -1,0 +1,7 @@
+---
+- name: Ping all hosts
+  hosts: sol_system
+  user: knifey
+  tasks:
+    - name: ping
+      ansible.builtin.ping: 
