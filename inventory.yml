@@ -21,4 +21,4 @@ all:
         mercury: {}
   vars:
     ansible_python_interpeter: /usr/bin/python3
-    remote_user: knifey
+    remote_user: ubuntu

@@ -1,0 +1,7 @@
+---
+- name: Check the connectivity of the hosts
+  hosts: sol_system
+  user: ubuntu
+  tasks:
+    - name: Check if we can ping the hosts
+      ansible.builtin.ping:
