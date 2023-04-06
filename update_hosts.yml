@@ -1,11 +1,11 @@
 ---
 - name: Update and upgrade all hosts
   hosts: sol_system
-  user: ubuntu
+  user: knifey
   tasks:
-    - name: Update and upgrade via apt with updating cache
+    - name: Update and upgrade via yum with updating cache
       become: true
-      ansible.builtin.apt:
+      ansible.builtin.yum:
           name: "*"
           update_cache: yes
           state: latest

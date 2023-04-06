@@ -2,13 +2,13 @@
 all:
   hosts:
     mercury:
-      ansible_host: mercury.knifey.com
+      ansible_host: mercury.knifey
     venus:
-      ansible_host: venus.knifey.com
+      ansible_host: venus.knifey
     earth:
-      ansible_host: earth.knifey.com
+      ansible_host: earth.knifey
     mars:
-      ansible_host: mars.knifey.com
+      ansible_host: mars.knifey
   children:
     sol_system:
       hosts:
@@ -21,4 +21,4 @@ all:
         mercury: {}
   vars:
     ansible_python_interpeter: /usr/bin/python3
-    remote_user: ubuntu
+    remote_user: knifey
