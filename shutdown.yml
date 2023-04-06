@@ -1,0 +1,10 @@
+---
+- name: Shutdown all the hosts with a 30 second timeout
+  hosts: sol_system
+  user: knifey
+  become: true
+  tasks:
+    - name: Initiate shutdown
+      community.general.shutdown:
+        delay: 30
+
