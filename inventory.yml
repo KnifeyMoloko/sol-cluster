@@ -16,6 +16,12 @@ all:
         venus: {}
         earth: {}
         mars: {}
+    node_exporter:
+      hosts:
+        mercury: {}
+        venus: {}
+        earth: {}
+        mars: {}
     monitor:
       hosts:
         mercury: {}

@@ -1,0 +1,9 @@
+---
+# Default theme
+oh_my_zsh_theme: fino-time
+
+# Default plugins
+oh_my_zsh_plugins:
+  - git
+  - kubectl
+

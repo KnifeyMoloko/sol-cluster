@@ -1,0 +1,15 @@
+---
+- hosts: node_exporter
+  user: knifey
+  become: true
+  roles:
+    - prometheus.prometheus.node_exporter
+    - paulfantom.rpi_exporter
+  post_tasks:
+    - name: Open port for RPI exporter
+      ansible.posix.firewalld:
+        port: 9243/tcp
+        permanent: true
+        immediate: true
+        state: enabled
+

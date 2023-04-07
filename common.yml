@@ -1,0 +1,6 @@
+---
+- hosts: all
+  user: knifey
+  roles:
+    - common
+
